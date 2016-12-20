@@ -56,7 +56,6 @@
             this.textBox1.Size = new System.Drawing.Size(198, 20);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "http://192.168.2.27:8080/";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -74,7 +73,6 @@
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Server URL";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -102,7 +100,6 @@
             this.textBox3.Size = new System.Drawing.Size(87, 20);
             this.textBox3.TabIndex = 6;
             this.textBox3.Text = "Admin";
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
@@ -136,7 +133,6 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

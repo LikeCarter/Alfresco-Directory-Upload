@@ -45,22 +45,19 @@ namespace Alfresco_Upload
 
         public void clickHandler()
         {
-
             using (FolderBrowserDialog dialog = new FolderBrowserDialog())
             {
 
                 DialogResult result = dialog.ShowDialog();
-                if (result == System.Windows.Forms.DialogResult.OK)
+                if (result.Equals(System.Windows.Forms.DialogResult.OK))
                 {
                     try
                     {
-
                         DirectoryInfo di = new DirectoryInfo(dialog.SelectedPath);
                         string path = createFolder(di.Name, directory);
                         uploadFilesInDirectory(di, path);
                         createDirectoriesAndFiles(di, path);
-
-                        MessageBox.Show("Directories created successfully");
+                        MessageBox.Show("Directories created successfully!");
                     }
                     catch
                     {
@@ -100,12 +97,9 @@ namespace Alfresco_Upload
             IDictionary<string, object> properties = new Dictionary<string, object>();
             properties.Add(PropertyIds.Name, file.Name);
             properties.Add(PropertyIds.ObjectTypeId, "cmis:document");
-
             byte[] content = File.ReadAllBytes(file.FullName);
             string mimeType = MimeMapping.GetMimeMapping(file.Name);
-
             IContentStream contentStream = session.ObjectFactory.CreateContentStream(file.Name, content.LongLength, mimeType, new MemoryStream(content));
-
             IFolder root = session.GetObjectByPath(uploadPath) as IFolder;
             root.CreateDocument(properties, contentStream, VersioningState.Major);
 
