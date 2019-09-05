@@ -1,6 +1,6 @@
 # alfresco-bulk-upload
 
-[![License](https://img.shields.io/github/license/likecarter/alfresco-bulk-upload/)](https://okatee.com)
+![GitHub](https://img.shields.io/github/license/likecarter/alfresco-bulk-upload)
 
 [alfresco-bulk-upload](https://github.com/LikeCarter/alfresco-bulk-upload/) is a standalone, high performance bulk upload tool for [Alfresco](http://www.alfresco.org/). This tool circumvents the web browser, and directly interfaces with the [CMIS Protocol](https://www.oasis-open.org/committees/cmis/).
 
